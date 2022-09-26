@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F8F9F9;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif
+}
+
+hr {
+    margin-left:0;
+    border: none; 
+    border-top: 1px solid #ccc;
+}
+
+.wrap {
+    padding: 1.5rem;
+}
+nav {
+    padding: 16px 36px;
+}
+nav container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 0 auto;
+}
+nav container ul, nav container .nav_menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 46px;
+}
+nav container li a {
+    padding: 8px;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    transition: color 150ms ease-out;
+}
+nav container li a:hover {
+    color: grey;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a{
+      display: block;
+  }
+
+
+.info{
+    padding: 20px 100px 100px 100px; 
+}
+
+about, research, presentations{
+    font-family: 'Lato', sans-serif;
+}
+
+about, .research_info, .video_part1, .video_part2 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+about img, research img{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      
+}
+
+about a, research a{
+    color: #2980B9;
+    text-decoration: none;
+}
+
+
+.about_image{
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+h3{
+    color: #D35400;
+}
+
+h4{
+    font-weight: 900;
+    color: #DC7633;
+}
+
+.research_text, .research_example{
+    padding-right: 100px;
+}
+
+.research_image img{
+    margin-bottom: 15px;
+}
+
+.filetype{
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    background: black;
+}
+
+
+:root {
+    --primary-color: 17, 64, 92;
+    --secondary-color: 91, 209, 215;
+    --text-color: 0, 77, 97;
+    --gray-light: 224, 224, 224;
+}
+
+
+.chip {
+    padding: 0 12px;
+    border-radius: 100px;
+    display: inline-flex;
+    margin: 4px;
+    color: rgba(0, 0, 0, .87);
+    align-items: center;
+    height: 32px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.chip a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, .87);
+}
+
+.ppt{
+    background-color: #F6DDCC;
+}
+
+.pdf{
+    background-color: #FADBD8;
+}
+
+.abstract{
+    background-color: #FADBD8;
+}
+
+.none, .people-box-info a{
+    color: #2980B9;
+    text-decoration: none;
+}
+
+.orange_line{
+    border: 2px #DC7633  solid;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.video_part1{
+    padding-right: 200px;
+}
+
+.video_part1 img{
+    margin-left: 100px;
+    border: 1px black solid;
+    margin-bottom: 50px;
+}
+
+.people-box{
+    margin-bottom: 20px;
+}
+
+.people-box-info{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+.news-block-info{
+    margin-left: 20px;
+    display: inline-block;
+    width: 700px;
+}
+.Curriculum-block-info{
+    margin-left: 20px;
+    display: inline-block;
+    width: 700px;
+}
+
+.date{
+    color: #EDBB99 ;
+}

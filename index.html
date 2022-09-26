@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Omesh Dhar Dwivedi</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <link rel="stylesheet" href="index.css">
+   </head>
+   <body>
+      <div id="app" >
+      <div class="blue_line"></div>
+      <div class="wrap">
+         <!-- THIS IS THE NAVIGATION BAR --> 
+         <nav>
+            <container>
+               <div class="nav_menu">
+                  <logo>
+                     <a href="https://www.drexel.edu/" target="_blank"><img src="logo.png" width="150px"/></a>
+                  </logo>
+                  <li><a v-on:click="display = 'about'">About</a></li>
+                  <li><a v-on:click="display = 'Curriculum'"> Curriculum Vitae </a></li>
+                  <div class="dropdown" >
+                     <li>
+                        <a v-on:click="display = 'research'">Research</a>
+                        <div class="dropdown-content">
+                           <a v-on:click="display = 'presentations'">Presentations</a>
+                           <a v-on:click="display = 'publications'">Publications</a>
+                        </div>
+                     </li>
+                  </div>
+                  <li><a v-on:click="display = 'courses'">Courses and Teaching Experience</a></li>
+                  <li><a v-on:click="display = 'Links'">Links</a></li>
+                  <li><a v-on:click="display = 'Fun Stuff'">Fun Stuff</a></li>
+
+               </div>
+            </container>
+         </nav>
+         <!-- THIS IS THE ABOUT PAGE -->  
+         <about v-if="display === 'about'">
+            <div class="about_image">
+               <img src="pic.jpeg" width="300px" />
+            </div>
+            <div class="info">
+               <h1> Omesh Dhar Dwivedi</h1>
+               <hr />
+               <p><b>Office:</b> 3675 Market Street, Room 1169 <br>
+                  <b>Phone:</b> 267-521-[six two five four] <br>
+                  <b>Email: </b>"greatodda" at "gmail" dot "com", "odd23" at "drexel" dot "edu" </a> 
+               </p>
+               <b>Websites: </b>
+               <li><a href="https://scholar.google.com/citations?user=2SBJFIgAAAAJ&hl=en"> Google Scholar </a> </li>
+               <li><a href="https://orcid.org/0000-0003-3633-8874/"> Orcid: 0000-0003-3633-8874 </a> </li>
+               <li><a href="http://github.com/greatodda/"> github.com/greatodda </a> </li>
+               </p>
+               <p>
+                  Hi I am a first year Computer Science Ph.D. student at Drexel University. My research interests lie at the intersection of theoretical computer science (complexity theory, algorithmic game theory) and pure math (algebraic combinatorics, number theory and geometry). I previously graduated from Drexel University in Spring '22 with a bachelor's in physics and mathematics. Nice to meet you.</a>
+                <p><b><i>Note: Big thanks to Minh Le for helping me design this website, and basically coding the full skeleton for a coding illiterate like me. </i></b></p>
+            </div>
+         </about>
+         <!-- THIS IS THE CURRICULUM VITAE  PAGE --> 
+         <Curriculum v-if="display === 'Curriculum'">
+            <div class="info">
+               <h1> Curriculum Vitae </h1>
+               <hr style="width:15%" />
+               <div class="Curriculum-block">
+                  <p>Hi. Here is my Curriculum Vitae.  </p>
+                  <li><a href="resume.pdf"> Curriculum Vitae </a> </li>
+               </div>
+               </div>
+        </Curriculum>
+         <!-- THIS IS THE RESEARCH PAGE -->  
+         <research v-if="display === 'research'">
+            <div class="info">
+               <h1> Research </h1>
+               <hr style="width:15%"  />
+               <h3> Here is a brief description of my research interests and projects </h3>
+               <div class="research_info">
+                  <div class="research_text">
+                     <p>I have participated in research across several disciplines during my undergraduate and graduate career. My freshman summer, I received the STAR scholarship to perform paid research with any Drexel faculty of choice. As a STAR Scholar, I did particle physics research under Dr. Russell Neilson where I set up from scratch, and performed GEANT4 simulations of the Drexel Bubble Chamber as part of the PICO collaboration which works to perform observational dark matter detection. I have also, as part of my coop experience, worked at the Princeton Plasma Physics Laboratory (PPPL), a DOE national lab, with Dr. Igor Kaganovich and Dr. Stephane Ethier, where I delved in research in quantum chemistry and plasma physics. I worked on two projects during my time at PPPL - studying Boron Nitride Nanotube (BNNT) formation and studying etching of sillicon via fluorine. We published our results for the first project in 2021 (more information can be found in Publications section) and are correctly working on the manuscript for the second which should be published soon.   </p>
+                  </div>
+               </div>
+            
+            </div>
+         </research>
+         <!-- THIS IS THE PRESENTATIONS PAGE -->   
+         <presentations v-if="display === 'presentations'">
+            <div class="info">
+               <h1> Presentations and News Articles </h1>
+               <hr style="width:15%" />
+               <div class="news-block">
+                  <img src="https://www.pppl.gov/sites/g/files/toruqf286/files/styles/16x9_2880w_1620h/public/2021-09/300%20BNNT%20Collage.png?itok=40nUp0qi" width="450px" />
+                  <div class="news-block-info">
+                     <h2>
+                        Scientists demonstrate pathway to forerunner of rugged nanotubes that could lead to widespread industrial fabrication
+                     </h2>
+                     <p class="date">Thursday, Mar 25, 2021</p>
+                     <p>by <i>John Greenwald</i></p>
+                     <p>
+                        Scientists have identified a chemical pathway to an innovative insulating nanomaterial that could lead to large-scale industrial production for a variety of uses – including in spacesuits and military vehicles. The nanomaterial -- thousands of times thinner than a human hair, stronger than steel and noncombustible -- could block radiation to astronauts and help shore up military vehicle armor, for example.
+                        <a href="https://www.pppl.gov/news/2021/scientists-demonstrate-pathway-forerunner-rugged-nanotubes-could-lead-widespread">Read More </a>
+                     </p>
+                  </div>
+               </div>
+               <hr />
+               <hr style="width:15%"  />
+               <h3> Selected presentations grouped according to topics</h3>
+               <p>
+                 My main fields of research are Algebraic Combinatorics and Algorithmic Game Theory. Previously I have worked in particle physics and quantum chemistry/plasma physics. The presentations are grouped according to the field.
+               </p>
+               <h4>Quantum Chemistry/Plasma Physics</h4>
+               <ul>
+                  <li>
+                 DFTB+ simulation of BxNy species formation for Boron Nitride nanotubes synthesis
+                     <div class="chip ppt"> <a href="ITCPP.ppt">PowerPoint </a></div>
+                     <div class="chip abstract"> <a href="gecabstract.pdf"> Abstract </a></div>
+                  </li>
+               </ul>
+
+            </div>
+         </presentations>
+         <publications v-if="display === 'publications'">
+            <div class="info">
+               <h1> Publications </h1>
+               <hr style="width:15%"  />
+               <h3> In Reverse Chronological Order </h3>
+                
+               
+
+
+                                                                                        <li>
+                                                                                            <span style="font-size:10.0pt;font-family:Verdana,sans-serif">
+                                                                                                Omesh Dhar Dwivedi and Darij Grinberg, 
+																								"On the Rank of Hankel Matrices over Finite Fields," Linear Algebra and its Applications 641 156-181 (2022)
+																							 <a class="none" href="https://arxiv.org/abs/2109.05415"> arXiv:2109.05415</a>, 
+                                                                                             <a class="none" href="https://doi.org/10.1016/j.laa.2022.02.014">DOI: 10.1016/j.laa.2022.02.014</a>
+                                                                                                
+                                                                                            </span>
+                                                                                            <a href="https://arxiv.org/abs/2105.05934" target="_blank">
+                                                                                                <span style="text-decoration:none"><span>
+                                                                                                    <div class="chip pdf"> <a href="hankel.pdf"/> PDF</a></div>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li><br>                                                                                        
+
+
+                                                                                        <li>
+                                                                                            <span style="font-size:10.0pt;font-family:Verdana,sans-serif">
+                                                                                                Yuri Barsukov, Omesh Dwivedi, Igor Kaganovich, Sierra Jubin, Alexander Khrabry, Stephane Ethier, 
+																								"Boron nitride nanotube precursor formation during high-temperature synthesis: 
+																								Kinetic and thermodynamic modelling," Nanotechnology 32 475604 (2021)
+																							 <a class="none" href="https://arxiv.org/abs/2105.05934"> arXiv:2105.05934</a>, 
+                                                                                             <a class="none" href="https://doi.org/10.1088/1361-6528/ac1c20">DOI: 10.1088/1361-6528/ac1c20</a>
+                                                                                                
+                                                                                            </span>
+                                                                                            <a href="https://arxiv.org/abs/2105.05934" target="_blank">
+                                                                                                <span style="text-decoration:none"><span>
+                                                                                                    <div class="chip pdf"> <a href="https://arxiv.org/abs/2105.05934"/> PDF</a></div>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li><br>
+                                                                                        
+          <p
+              style="font-family:Verdana, sans-serif;font-size:19px;color:rgb(255, 153, 0);line-height:14.25pt">
+              <span
+                  style="font-size:10.0pt;font-family:Verdana,sans-serif;color:blue">
+                  <a href="#top"
+                      class="disabled">
+                      <span
+                          style="color:#451670">back
+                          to top</span>
+                  </a>
+              </span>
+
+
+            </div>
+         </publications>
+         <courses v-if="display === 'courses'">
+            <div class="info">
+                <h1> Courses and Teaching Experience </h1>
+                <hr style="width:15%"  />
+                <h3> Courses </h3>
+                Here are the graduate level courses I have taken.
+                <ul>
+                    <li>
+                       "Data Structure and Algorithms I (CS 521)" - Fall 2022
+                    </li>
+                    <li>
+                        "Data Structure and Algorithms II (CS 522)" - Spring 2022
+                    </li>
+                    <li>
+                        "Advanced Linear Algebra and Matrix Analysis (MATH 504)" - Fall 2021
+                     </li>
+                     <li>
+                         "Topology (MATH 536)" - Winter 2021
+                     </li>
+
+                     <li>
+                        "Principles of Analysis I (MATH 505)" - Fall 2020
+                    </li>
+                    <li>
+                        "Topics in Extremal Graph Theory (MATHT680)" - Spring 2020
+                    </li>
+                    <li>
+                        "Algebraic Number Theory (MATH I399)" - Winter 2020
+                    </li>
+                    <li>
+                        "Abstract Algebra I (MATH 533)" - Winter 2020
+                    </li>
+                 </ul>
+               
+               <h4> Teaching Experience</h4>
+               Here are the courses I have been a Teaching Assistant for.
+               <ul>
+                <li>
+                   "Introduction to Computer Science (CS 164)" - Fall 2022
+                </li>
+                <li>
+                    "Linear Algebra II (MATH 387)" - Winter 2022
+                </li>
+                <li>
+                    "Enumerative Combinatorics (MATH 222)" - Fall 2021
+                 </li>
+                 <li>
+                     "Discrete Mathematics (MATH 221)" - Fall 2021
+                 </li>
+
+                 <li>
+                    "Linear Algebra II (MATH 387)" - Winter 2021
+                </li>
+             </ul>
+
+           </div> 
+         </courses>
+         <people v-if="display === 'people'">
+            <div class="info">
+               <h1> Links </h1>
+            </div>
+         </people>
+         <news v-if="display === 'news'">
+            <div class="info">
+               <h1> Fun Stuff </h1>
+               <hr style="width:15%" />
+               <div class="news-block">
+                  <img src="https://www.pppl.gov/sites/g/files/toruqf286/files/styles/16x9_2880w_1620h/public/2021-09/300%20BNNT%20Collage.png?itok=40nUp0qi" width="450px" />
+                  <div class="news-block-info">
+                     <h2>
+                        Scientists demonstrate pathway to forerunner of rugged nanotubes that could lead to widespread industrial fabrication
+                     </h2>
+                     <p class="date">Thursday, Mar 25, 2021</p>
+                     <p>by <i>John Greenwald</i></p>
+                     <p>
+                        Scientists have identified a chemical pathway to an innovative insulating nanomaterial that could lead to large-scale industrial production for a variety of uses – including in spacesuits and military vehicles. The nanomaterial -- thousands of times thinner than a human hair, stronger than steel and noncombustible -- could block radiation to astronauts and help shore up military vehicle armor, for example.
+                        <a href="https://www.pppl.gov/news/2021/scientists-demonstrate-pathway-forerunner-rugged-nanotubes-could-lead-widespread">Read More </a>
+                     </p>
+                  </div>
+               </div>
+               <hr />
+
+
+            </div>
+         </news>
+
+         </div>
+      </div>
+      <script src="index.js"></script>
+   </body>
+</html>
